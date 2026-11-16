@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Open-Box Fallacy</title>
 <meta name="description" content="Project page for The Open-Box Fallacy. AI deployment should be licensed by calibrated verification of a specific use, reported as Verification Coverage, rather than by mechanistic transparency alone.">
-<script>try{var sv=localStorage.getItem('page-theme');if(sv==='light'||sv==='dark')document.documentElement.setAttribute('data-theme',sv);}catch(e){}</script>
+<script>try{var sv=localStorage.getItem('obf-theme');if(sv==='light'||sv==='dark')document.documentElement.setAttribute('data-theme',sv);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Manrope:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,24 +30,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);fon
 a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px}
 a:hover{color:var(--accent)}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px}
-.wide{max-width:1120px;margin:0 auto;padding:0 16px}
-header.top{padding-top:72px;padding-bottom:28px}
-.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 18px}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.08;letter-spacing:-.01em;margin:0 0 10px}
-.sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,23px);color:var(--ink2);margin:0 0 22px}
-.stand{font-size:20px;color:var(--ink);margin:0 0 26px;max-width:640px}
-.byline{font-family:var(--sans);font-size:14.5px;color:var(--ink2);line-height:1.6;margin:0 0 6px}
-.byline sup{font-size:10px}
-.aff{font-family:var(--sans);font-size:13px;color:var(--mute);margin:0 0 20px}
-.links{font-family:var(--sans);font-size:15px;font-weight:600;margin:0;display:flex;flex-wrap:wrap;gap:4px 0}
-.links a,.links span{white-space:nowrap}
-.links .sep{color:var(--mute);font-weight:400;padding:0 9px}
 /* ledger hero */
-.hero{background:var(--paper);border-block:1px solid var(--rule);padding:34px 0 30px;margin:26px 0 0}
-.hero-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 20px;margin-bottom:6px}
-.hero-title{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0}
-.hero-instr{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:0}
 .ledger{display:grid;grid-template-columns:minmax(150px,1.5fr) repeat(6,minmax(0,1fr)) minmax(92px,.9fr);border:1px solid var(--rule);border-radius:4px;overflow:hidden;font-family:var(--sans);margin-top:14px;background:var(--paper)}
 .ledger>div{padding:10px 8px;border-bottom:1px solid var(--rule2);display:flex;align-items:center}
 .lh{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);background:var(--bg);justify-content:center;text-align:center;line-height:1.25;cursor:pointer}
@@ -83,37 +66,9 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,54px);line-
   .reader{grid-template-columns:1fr}
 }
 /* cards */
-.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:34px 0 8px}
-.card{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--rule);border-radius:4px;background:var(--paper);padding:12px 12px 14px;transition:border-color .15s}
-.card:hover{border-color:var(--accent);color:var(--ink)}
-.card svg{display:block;width:100%;height:56px;margin-bottom:10px}
-.card .n{font-family:var(--mono);font-size:10.5px;color:var(--mute);letter-spacing:.1em}
-.card .t{font-family:var(--sans);font-size:13.5px;font-weight:600;line-height:1.3;margin-top:3px}
-@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
 /* text */
 main{padding-bottom:40px}
-section{scroll-margin-top:70px}
-h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3.6vw,31px);line-height:1.2;margin:64px 0 14px;letter-spacing:-.005em}
 h3{font-family:var(--sans);font-size:17px;font-weight:700;margin:30px 0 8px}
-.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:64px 0 -6px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:14px;height:14px;border:1.5px solid currentColor;border-radius:50%;background:radial-gradient(circle,currentColor 0 2.5px,transparent 3px)}
-.eyebrow+h2{margin-top:14px}
-p{margin:0 0 16px}
-.tldr{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:46px 0 30px}
-.tldr h2{margin:0 0 10px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500}
-.tldr p{font-size:19px}
-.abs p b{font-family:var(--sans);font-size:15px;letter-spacing:.02em}
-.worst{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:16px 20px;font-size:17px}
-.worst b{font-family:var(--sans);font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
-.defs{border:1px solid var(--rule);border-radius:4px;background:var(--paper);margin:34px 0;padding:6px 20px}
-.defs h2{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500;margin:14px 0 4px}
-.defs dl{margin:0}
-.defs .d{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--rule2)}
-.defs .d:first-of-type{border-top:none}
-.defs dt{font-family:var(--sans);font-weight:700;font-size:15.5px}
-.defs dd{margin:2px 0 0;font-size:16px;color:var(--ink2)}
-.defs svg{width:24px;height:24px;margin-top:3px;color:var(--accent)}
-figure{margin:26px 0 30px}
 figcaption{font-family:var(--sans);font-size:13.5px;color:var(--mute);line-height:1.5;margin-top:10px}
 figcaption b{color:var(--ink2)}
 .ex{border:1px solid var(--rule);border-radius:4px;background:var(--paper);padding:18px;font-family:var(--sans);font-size:15px}
@@ -168,13 +123,51 @@ footer p{margin:0 0 8px}
 .toc{position:fixed;top:120px;left:max(16px,calc(50% - 600px));width:170px;font-family:var(--sans);font-size:13px;display:none}
 .toc a{display:block;color:var(--mute);text-decoration:none;padding:4px 0 4px 12px;border-left:2px solid var(--rule2);line-height:1.3}
 .toc a.on{color:var(--ink);border-left-color:var(--accent)}
-@media (min-width:1220px){.toc.show{display:block}}
 .topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule2);display:none;overflow-x:auto;white-space:nowrap;font-family:var(--sans);font-size:13px;padding:9px 16px}
 .topbar a{color:var(--mute);text-decoration:none;margin-right:16px}
 .topbar a.on{color:var(--ink)}
-@media (max-width:1219px){.topbar.show{display:block}}
 #themeTg{position:fixed;right:16px;bottom:16px;z-index:9;font:600 12.5px var(--sans);background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:8px 12px;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
 #themeTg svg{width:15px;height:15px}
+
+/* essay form */
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.col{max-width:660px}
+@media (min-width:1100px){.col{margin-left:80px}}
+.mast{border-bottom:1px solid var(--rule);font-family:var(--sans);font-size:13.5px;color:var(--mute);display:flex;justify-content:space-between;padding:14px 0}
+.mast a{color:var(--mute);text-decoration:none}
+header.top{padding-top:64px;padding-bottom:10px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,7.4vw,74px);line-height:1.02;letter-spacing:-.02em;margin:0 0 26px;max-width:900px}
+.deck{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.5vw,25px);line-height:1.45;color:var(--ink2);margin:0 0 30px;max-width:800px}
+.byline{font-family:var(--sans);font-size:14.5px;color:var(--ink2);line-height:1.6;margin:0 0 4px}
+.byline sup{font-size:10px}
+.aff{font-family:var(--sans);font-size:13px;color:var(--mute);margin:0 0 10px}
+.genre{font-family:var(--sans);font-size:14px;color:var(--mute);margin:0;display:flex;flex-wrap:wrap;gap:2px 0}
+.genre a{color:var(--ink2)}
+.genre .sep{padding:0 8px}
+section{scroll-margin-top:70px;position:relative}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3.6vw,34px);line-height:1.18;margin:72px 0 16px;letter-spacing:-.01em}
+.short{margin-top:46px}
+.short h2{margin-top:0}
+.short p{font-size:19.5px}
+p.lead::first-letter{font-family:var(--serif);font-weight:600;float:left;font-size:3.4em;line-height:.86;padding:6px 8px 0 0;color:var(--accent)}
+/* sidenotes */
+.sn{font-family:var(--sans);font-size:13.5px;line-height:1.5;color:var(--ink2);display:block;border-left:2px solid var(--accent);padding:2px 0 2px 12px;margin:10px 0 16px}
+.sn b{display:block;color:var(--ink);font-weight:700;font-size:13px}
+.sn svg{width:18px;height:18px;color:var(--accent);vertical-align:-4px;margin-right:4px}
+@media (min-width:1100px){.sn{float:right;clear:right;width:250px;margin:4px -310px 14px 0;border-left:none;border-top:1px solid var(--rule);padding:8px 0 0}}
+.fail{font-style:italic;color:var(--ink2)}
+/* figures */
+figure{margin:30px 0 34px}
+.fn{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--accent);margin-right:6px}
+.bleed{margin:44px 0;padding:30px 0 26px;border-block:1px solid var(--rule);background:var(--paper)}
+@media (min-width:1100px){.bleed{margin-left:-80px;margin-right:-140px;padding:30px 30px 26px;border:1px solid var(--rule);border-radius:4px}}
+.bleed-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 20px}
+.bleed-title{font-family:var(--serif);font-size:22px;font-weight:600;margin:0}
+.bleed-instr{font-family:var(--sans);font-size:14px;color:var(--ink2);margin:0}
+.toc{left:auto;right:max(16px,calc(50% - 600px));top:140px}
+@media (min-width:1100px) and (max-width:1399px){.toc.show{display:none}}
+@media (min-width:1400px){.toc.show{display:block}}
+@media (max-width:1399px){.topbar.show{display:block}}
 </style>
 </head>
 <body>
@@ -182,95 +175,44 @@ footer p{margin:0 0 8px}
 <nav class="toc" id="toc" aria-label="Contents"></nav>
 <button id="themeTg" type="button" aria-label="Toggle light or dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span id="themeLbl">Dark</span></button>
 
+<div class="wrap"><div class="mast"><span>Applied and Interpretable Machine Learning</span><a href="https://aiml-sdu.github.io" rel="external noopener">More research from the group ↗</a></div></div>
 <header class="top wrap">
-  <p class="kicker">Position paper · arXiv 2026</p>
-  <h1>The Open-Box Fallacy</h1>
-  <p class="sub">Why AI deployment needs a calibrated verification regime</p>
-  <p class="stand">Deployment in sensitive domains is often held back until a model can be explained from the inside. We argue that the licence to deploy should come from calibrated verification of one specific use, and that this can be reported beside capability scores.</p>
+  <h1>The Open-Box<br>Fallacy</h1>
+  <p class="deck">Deployment in sensitive domains is often held back until a model can be explained from the inside. We argue that the licence to deploy should come from calibrated verification of one specific use, and that this can be reported beside capability scores.</p>
   <p class="byline">Phongsakon Mark Konrad<sup>1</sup>, Tim Lukas Adam<sup>1</sup>, Ane Cathrine Holst Merrild<sup>1</sup>, Riccardo Terrenzi<sup>1</sup>, Rebecca De Rosa<sup>1</sup>, Toygar Tanyel<sup>2</sup>, Serkan Ayvaz<sup>1</sup></p>
   <p class="aff"><sup>1</sup>Centre for Industrial Software, University of Southern Denmark &nbsp; <sup>2</sup>ProMake, Newark, DE &nbsp;·&nbsp; May 2026</p>
-  <p class="links"><a href="https://arxiv.org/abs/2605.10601" rel="external noopener">arXiv ↗</a><span class="sep">·</span><a href="https://arxiv.org/pdf/2605.10601" rel="external noopener">PDF</a><span class="sep">·</span><a href="index.md">Markdown</a><span class="sep">·</span><a href="#cite">Cite this article</a></p>
+  <p class="genre"><span>A position paper</span><span class="sep">·</span><span>6-minute read</span><span class="sep">·</span><a href="https://arxiv.org/abs/2605.10601" rel="external noopener">arXiv ↗</a><span class="sep">·</span><a href="https://arxiv.org/pdf/2605.10601" rel="external noopener">PDF</a><span class="sep">·</span><a href="index.md">Markdown</a><span class="sep">·</span><a href="#cite">Cite this article</a></p>
 </header>
-
-<section class="hero" id="ledger" aria-label="Verification Coverage ledger">
-  <div class="wide">
-    <div class="hero-head">
-      <p class="hero-title">Ledger · five regimes on six rails</p>
-      <p class="hero-instr">Point at any regime or rail. The paper's own coding, cell for cell.</p>
-    </div>
-    <div class="ledger" id="ledgerGrid" role="grid" aria-label="Table 2 of the paper. Five regimes scored H, M or L on six Verification Coverage components."></div>
-    <div class="legend">
-      <span><span class="mark H">H</span>instantiated by statute, regulation, binding agency process or routine practice</span>
-      <span><span class="mark M">M</span>partial, voluntary, indirect or unevenly enforced</span>
-      <span><span class="mark L">L</span>thin, practically inaccessible or not attached to the AI deployment</span>
-    </div>
-    <div class="reader">
-      <div class="panel" id="readRegime"><h4>Regime</h4><p></p></div>
-      <div class="panel" id="readRail"><h4>Rail</h4><p></p></div>
-    </div>
-    <p class="note">From Table 2 of the paper. The coding is a diagnostic use of the vocabulary. It is not an empirical measurement and not a legal compliance determination. It scores the surrounding regime, never a model.</p>
-  </div>
-</section>
-
-<div class="wide">
-  <div class="cards" id="cards">
-    <a class="card" href="#jagged"><svg id="th1" viewBox="0 0 120 56" aria-hidden="true"></svg><div class="n">01</div><div class="t">Capability is jagged, so authority attaches to a use</div></a>
-    <a class="card" href="#evidence"><svg id="th2" viewBox="0 0 120 56" aria-hidden="true"></svg><div class="n">02</div><div class="t">Seeing inside is one stream of evidence</div></a>
-    <a class="card" href="#rails"><svg id="th3" viewBox="0 0 120 56" aria-hidden="true"></svg><div class="n">03</div><div class="t">Six rails, each from a failure mode</div></a>
-    <a class="card" href="#coverage"><svg id="th4" viewBox="0 0 120 56" aria-hidden="true"></svg><div class="n">04</div><div class="t">The weakest rail decides</div></a>
-    <a class="card" href="#regimes"><svg id="th5" viewBox="0 0 120 56" aria-hidden="true"></svg><div class="n">05</div><div class="t">Existing regimes are partly verified</div></a>
-  </div>
-</div>
-
-<main class="wrap">
-<section class="tldr" id="tldr">
-  <h2>TL;DR</h2>
-  <p>Mechanistic interpretability can show how a model works. It cannot by itself show that a given use is scoped, monitored and accountable. We call the demand that it serve as the deployment gate the open-box fallacy.</p>
+<main class="wrap"><div class="col">
+<section class="short" id="short">
+  <h2>The short version</h2>
+  <p class="lead">Mechanistic interpretability can show how a model works. It cannot by itself show that a given use is scoped, monitored and accountable. We call the demand that it serve as the deployment gate the open-box fallacy.</p>
   <p>Two facts carry the argument. Capability is uneven across nearby tasks, and in one field experiment consultants using AI were 19 percentage points less likely to solve a task just beyond its reach. Societies have also long licensed opaque experts through credentials, monitoring, liability, appeal and revocation.</p>
   <p>Understanding need not become control. One clinical study reports a 53 point gap between hazard information the model represents and what its output corrects. One scoping review found a prospective surveillance study for only 62 of 692 FDA approved AI/ML devices, or 9.0%.</p>
   <p>We propose Verification Coverage. It is a profile of six components with a minimum rule, so a single missing rail withholds authorization.</p>
 </section>
 
-<section id="abstract" class="abs">
-  <h2>Abstract</h2>
-  <p><b>First,</b> we name the open-box principle and the open-box fallacy. The principle says mechanistic evidence matters for deployment. The fallacy is the stronger demand that it decide deployment. Transparency is neither necessary when outputs can be checked from outside nor sufficient when the use has no scope, monitoring, accountability, contest path or way to revoke it.</p>
-  <p><b>Second,</b> we build calibrated verification as the alternative. Four evidence streams feed three verifier classes, and six regime properties follow from six documented failure modes. Authorization attaches to a deployment in a domain and to its deployer of record, never to a model in general.</p>
-  <p><b>Finally,</b> we propose Verification Coverage as a reportable standard that sits beside capability scores in model cards, leaderboards and regulatory disclosures. Applied to five existing regimes, it shows uneven coverage everywhere, and criminal justice has four thin rails out of six.</p>
+<section id="principle">
+  <h2>A principle and a fallacy</h2>
+  <p><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="13" rx="1"/><path d="M4 6l4-3h8l4 3"/></svg><b>Open-box principle</b>Mechanistic evidence about how a model produces its outputs is relevant to whether and how it should be used.</span><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="13" rx="1"/><path d="M4 6l4-3h8l4 3M7 9l10 8M17 9L7 17"/></svg><b>Open-box fallacy</b>The stronger demand that mechanistic evidence be the decisive condition for deployment.</span>We name the open-box principle and the open-box fallacy. The principle says mechanistic evidence matters for deployment. The fallacy is the stronger demand that it decide deployment. Transparency is neither necessary when outputs can be checked from outside nor sufficient when the use has no scope, monitoring, accountability, contest path or way to revoke it.</p>
+  <p><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M8 12l3 3 5-6"/></svg><b>Calibrated verification</b>A governance regime of formal checks, expert validation, institutional review, contestability, monitoring and revocation, scoped to one use.</span>We build calibrated verification as the alternative. Four evidence streams feed three verifier classes, and six regime properties follow from six documented failure modes. Authorization attaches to a deployment in a domain and to its deployer of record, never to a model in general.</p>
+  <p>We propose Verification Coverage as a reportable standard that sits beside capability scores in model cards, leaderboards and regulatory disclosures. Applied to five existing regimes, it shows uneven coverage everywhere, and criminal justice has four thin rails out of six.</p>
+  <p class="fail">The position would be wrong if mechanistic understanding reliably turned into correct behaviour, or if regimes with strong explanation demands proved safer than regimes with strong external checks. The paper cites evidence against the first, a 53 point gap between internal representation and output correction. It does not test the second. The scores in its domain table are a reasoned coding, and no one has yet measured Verification Coverage on a deployment.</p>
 </section>
-
-<div class="worst">
-  <p style="margin:0"><b>Where it could fail</b><br>The position would be wrong if mechanistic understanding reliably turned into correct behaviour, or if regimes with strong explanation demands proved safer than regimes with strong external checks. The paper cites evidence against the first, a 53 point gap between internal representation and output correction. It does not test the second. The scores in its domain table are a reasoned coding, and no one has yet measured Verification Coverage on a deployment.</p>
-</div>
-
-<div class="defs" id="defs">
-  <h2>Terms</h2>
-  <dl>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="13" rx="1"/><path d="M4 6l4-3h8l4 3"/></svg><div><dt>Open-box principle</dt><dd>Mechanistic evidence about how a model produces its outputs is relevant to whether and how it should be used.</dd></div></div>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="6" width="16" height="13" rx="1"/><path d="M4 6l4-3h8l4 3M7 9l10 8M17 9L7 17"/></svg><div><dt>Open-box fallacy</dt><dd>The stronger demand that mechanistic evidence be the decisive condition for deployment.</dd></div></div>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M8 12l3 3 5-6"/></svg><div><dt>Calibrated verification</dt><dd>A governance regime of formal checks, expert validation, institutional review, contestability, monitoring and revocation, scoped to one use.</dd></div></div>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18h16M7 18V9M12 18V5M17 18v-6"/></svg><div><dt>Jagged capability</dt><dd>A model can help on one task and hurt on a seemingly similar task in the same workflow.</dd></div></div>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg><div><dt>Deployer of record</dt><dd>The named actor accountable for one deployment context. A freely distributed model yields many such contexts.</dd></div></div>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M8 4v16" stroke-dasharray="2 2"/></svg><div><dt>Verification Coverage</dt><dd>A deployment level profile of six components, each present or absent, read with a minimum rule.</dd></div></div>
-    <div class="d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18h4V9H4zM10 18h4V5h-4zM16 18h4v-3h-4z"/><path d="M15 14h6" stroke-width="2.2"/></svg><div><dt>Minimum composition</dt><dd>The weakest required rail is binding. A zero on any one of them withholds authorization, whatever the others score.</dd></div></div>
-  </dl>
-</div>
-
-<p class="eyebrow">Chapter 01</p>
 <section id="jagged">
   <h2>Capability is jagged, so authority attaches to a use</h2>
-  <p>A model's capability is not one property that carries smoothly from task to task. In a field experiment with consultants, AI raised productivity and quality on many tasks but lowered correctness on a complex managerial task beyond its demonstrated reach. On that task consultants with AI were 19 percentage points less likely to reach a correct solution than those without it. Model level studies tell the same story, for instance models that recognise letters but fail to count them reliably.</p>
-  <p>If AI were uniformly incompetent, the debate would be short. If it were uniformly reliable, it would be shorter still. Models are capable enough to be useful, opaque enough to be hard to inspect and uneven enough that blanket acceptance and blanket refusal both fail. So authorization should attach to a deployment context with a named deployer, and the same base model can then be acceptable in one context and prohibited in another.</p>
+  <p><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18h16M7 18V9M12 18V5M17 18v-6"/></svg><b>Jagged capability</b>A model can help on one task and hurt on a seemingly similar task in the same workflow.</span>A model's capability is not one property that carries smoothly from task to task. In a field experiment with consultants, AI raised productivity and quality on many tasks but lowered correctness on a complex managerial task beyond its demonstrated reach. On that task consultants with AI were 19 percentage points less likely to reach a correct solution than those without it. Model level studies tell the same story, for instance models that recognise letters but fail to count them reliably.</p>
+  <p><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg><b>Deployer of record</b>The named actor accountable for one deployment context. A freely distributed model yields many such contexts.</span>If AI were uniformly incompetent, the debate would be short. If it were uniformly reliable, it would be shorter still. Models are capable enough to be useful, opaque enough to be hard to inspect and uneven enough that blanket acceptance and blanket refusal both fail. So authorization should attach to a deployment context with a named deployer, and the same base model can then be acceptable in one context and prohibited in another.</p>
   <figure>
     <div class="ex" id="ctxBox">
       <span class="tag">illustration</span>
       <div class="seg" role="group" aria-label="Deployment context" id="ctxSeg"></div>
       <div id="ctxOut"></div>
     </div>
-    <figcaption><b>One base model, three deployment contexts.</b> The contexts are the paper's own examples. Each one carries its own deployer of record and its own verification duties, so a single model never receives one general authorization.</figcaption>
+    <figcaption><span class="fn">FIG. 1</span><b>One base model, three deployment contexts.</b> The contexts are the paper's own examples. Each one carries its own deployer of record and its own verification duties, so a single model never receives one general authorization.</figcaption>
   </figure>
 </section>
 
-<p class="eyebrow">Chapter 02</p>
 <section id="evidence">
   <h2>Seeing inside is one stream of evidence</h2>
   <p>Calibrated verification draws on four evidence streams. Mechanistic evidence reads internal structure. Behavioural evaluation tests outputs on held out data, red team probes and prospective trials. Independent review checks the process that produced the evidence. Domain experts and affected people find harms and contest paths that evaluators miss. Each stream has a scope limit, and the streams feed three verifier classes, called formal, empirical and social normative.</p>
@@ -280,25 +222,23 @@ footer p{margin:0 0 8px}
       <div class="streams" role="group" aria-label="Evidence stream" id="streamSeg"></div>
       <div id="streamOut"></div>
     </div>
-    <figcaption><b>The four evidence streams of Section 3.1.</b> Choose a stream to read what it contributes and where its scope ends. The numbers are those the paper cites. The bars compare quantities within one study each and are not on a shared scale.</figcaption>
+    <figcaption><span class="fn">FIG. 2</span><b>The four evidence streams of Section 3.1.</b> Choose a stream to read what it contributes and where its scope ends. The numbers are those the paper cites. The bars compare quantities within one study each and are not on a shared scale.</figcaption>
   </figure>
 </section>
 
-<p class="eyebrow">Chapter 03</p>
 <section id="rails">
   <h2>Six rails, each from a failure mode</h2>
   <p>The six properties of the regime are not a wish list. Each answers a deployment failure that the paper documents. Capability varies across nearby tasks, so authorization must be scoped to a domain. Self reported evidence may be incomplete, so it must be independently checkable. Performance can change after release, so it must be monitored. Harm needs a responsible actor, affected people catch errors evaluators miss, and new evidence should change a deployment's status. Those give accountability, contestability and revocation.</p>
   <p>The properties do not trade against each other. Strong benchmark results do not stand in for a contest path in a domain that affects rights. Strong interpretability evidence does not stand in for a monitoring plan in a clinical setting that drifts.</p>
   <figure>
     <div class="ex"><div class="flow" id="flow"></div></div>
-    <figcaption><b>Table 1 of the paper.</b> Point at a failure mode to light the property it requires, and the reverse. The mapping is one to one.</figcaption>
+    <figcaption><span class="fn">FIG. 3</span><b>Table 1 of the paper.</b> Point at a failure mode to light the property it requires, and the reverse. The mapping is one to one.</figcaption>
   </figure>
 </section>
 
-<p class="eyebrow">Chapter 04</p>
 <section id="coverage">
   <h2>The weakest rail decides</h2>
-  <p>Verification Coverage records, for a deployment, whether each of the six components is present and sufficiently documented. It is reported first as that profile. The minimum rule makes the weakest required rail binding, and a zero on any rail withholds authorization. A weighted sum may be reported for convenience, with weights set by the authorizing institution, but it must never replace the profile, because the same sum can hide different gaps.</p>
+  <p><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M8 4v16" stroke-dasharray="2 2"/></svg><b>Verification Coverage</b>A deployment level profile of six components, each present or absent, read with a minimum rule.</span><span class="sn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18h4V9H4zM10 18h4V5h-4zM16 18h4v-3h-4z"/><path d="M15 14h6" stroke-width="2.2"/></svg><b>Minimum composition</b>The weakest required rail is binding. A zero on any one of them withholds authorization, whatever the others score.</span>Verification Coverage records, for a deployment, whether each of the six components is present and sufficiently documented. It is reported first as that profile. The minimum rule makes the weakest required rail binding, and a zero on any rail withholds authorization. A weighted sum may be reported for convenience, with weights set by the authorizing institution, but it must never replace the profile, because the same sum can hide different gaps.</p>
   <p>Passing does not compel deployment. It only permits consideration, and institutional judgment about residual risk remains. Failing on a required rail blocks authorization until the deployment is redesigned and evaluated again.</p>
   <figure>
     <div class="ex">
@@ -311,23 +251,40 @@ footer p{margin:0 0 8px}
       </div>
       <div class="verdict" id="verdict"></div>
     </div>
-    <figcaption><b>Profile, sum and minimum.</b> With five rails on, the equal weight sum reads 5/6 whichever rail is missing, while the minimum stays at zero and names the rail to repair. The hypothetical deployment and the equal weights are ours. The rule is the paper's.</figcaption>
+    <figcaption><span class="fn">FIG. 4</span><b>Profile, sum and minimum.</b> With five rails on, the equal weight sum reads 5/6 whichever rail is missing, while the minimum stays at zero and names the rail to repair. The hypothetical deployment and the equal weights are ours. The rule is the paper's.</figcaption>
   </figure>
 </section>
 
-<p class="eyebrow">Chapter 05</p>
 <section id="regimes">
   <h2>Existing regimes are partly verified</h2>
   <p>High stakes regimes already separate model output from deployment authority. None of them is fully verified. Medicine has authorization and reviewability but weak surveillance. Credit has reasons and correction but weak lifecycle monitoring. Employment has audit and notice but weak revocation. Autonomous systems report incidents but give affected non operators little route to appeal. Criminal justice has a named institutional authority but weak verification and contestability.</p>
+  <figure class="bleed" id="ledger" aria-label="Verification Coverage ledger">
+    <div class="bleed-head">
+      <p class="bleed-title"><span class="fn">FIG. 5</span>Five regimes on six rails</p>
+      <p class="bleed-instr">Point at any regime or rail. The paper's own coding, cell for cell.</p>
+    </div>
+    <div class="ledger" id="ledgerGrid" role="grid" aria-label="Table 2 of the paper. Five regimes scored H, M or L on six Verification Coverage components."></div>
+    <div class="legend">
+      <span><span class="mark H">H</span>instantiated by statute, regulation, binding agency process or routine practice</span>
+      <span><span class="mark M">M</span>partial, voluntary, indirect or unevenly enforced</span>
+      <span><span class="mark L">L</span>thin, practically inaccessible or not attached to the AI deployment</span>
+    </div>
+    <div class="reader">
+      <div class="panel" id="readRegime"><h4>Regime</h4><p></p></div>
+      <div class="panel" id="readRail"><h4>Rail</h4><p></p></div>
+    </div>
+    <p class="note">From Table 2 of the paper. The coding is a diagnostic use of the vocabulary. It is not an empirical measurement and not a legal compliance determination. It scores the surrounding regime, never a model.</p>
+  </figure>
+
   <p>The medical gap has a number. A 2024 scoping review found that only 62 of 692 FDA approved AI/ML devices contained a prospective study for post-market surveillance. Under the Monitoring Maturity floor, that deficiency would block authorization.</p>
   <figure>
     <div class="ex">
       <div class="dots" id="dots" role="img" aria-label="692 dots, 62 highlighted"></div>
       <p style="margin:10px 0 0;font-size:13.5px;color:var(--ink2)"><span style="color:var(--ok);font-weight:700">62</span> of 692 devices with a prospective post-market surveillance study (9.0%).</p>
     </div>
-    <figcaption><b>One dot per device in the scoping review the paper cites.</b> The highlighted dots are the devices whose documents contained a prospective surveillance study.</figcaption>
+    <figcaption><span class="fn">FIG. 6</span><b>One dot per device in the scoping review the paper cites.</b> The highlighted dots are the devices whose documents contained a prospective surveillance study.</figcaption>
   </figure>
-  <p>Criminal justice is the limiting case. A state supreme court allowed consideration of a proprietary risk score with cautions, later work found that the score did not beat a simple two feature model or pooled lay judgments on the task studied, and the tool's secrecy has been criticised. Higher stakes call for stronger verifiability, not simply stronger demands for explanation. Select any row of the ledger above to read its rails.</p>
+  <p>Criminal justice is the limiting case. A state supreme court allowed consideration of a proprietary risk score with cautions, later work found that the score did not beat a simple two feature model or pooled lay judgments on the task studied, and the tool's secrecy has been criticised. Higher stakes call for stronger verifiability, not simply stronger demands for explanation. Select any row of the ledger to read its rails.</p>
 </section>
 
 <section id="scope">
@@ -359,13 +316,13 @@ footer p{margin:0 0 8px}
   year    = {2026}
 }</pre>
 </section>
-</main>
+</div></main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap"><div class="col">
     <p>Every number and every ledger cell on this page comes from the paper. Widgets marked illustration explain a rule and show no results.</p>
     <p>A project of the <a href="https://aiml-sdu.github.io" rel="external noopener">Applied and Interpretable Machine Learning Research Group</a> at the University of Southern Denmark.</p>
-  </div>
+  </div></div>
 </footer>
 
 <script type="application/json" id="data">
@@ -458,17 +415,8 @@ drawVC();
 /* chapter 5 dots */
 var dz=document.getElementById('dots'),h='';for(var k=0;k<D.surveil.total;k++)h+='<i'+(k<D.surveil.with?' class="y"':'')+'></i>';dz.innerHTML=h;
 
-/* thumbnails */
-function th(id,s){document.getElementById(id).innerHTML=s;}
-var C='currentColor';
-th('th1','<g fill="none" stroke="'+C+'" stroke-width="1.6"><polyline points="4,44 22,30 38,36 54,14 70,40 86,22 102,34 116,12"/></g><circle cx="70" cy="40" r="4" fill="var(--low)"/>');
-th('th2','<g fill="none" stroke="'+C+'" stroke-width="1.4"><rect x="4" y="8" width="24" height="40" rx="2"/><rect x="33" y="8" width="24" height="40" rx="2"/><rect x="62" y="8" width="24" height="40" rx="2"/><rect x="91" y="8" width="24" height="40" rx="2"/></g><rect x="4" y="8" width="24" height="5" fill="var(--ok)"/>');
-var t3='';for(var i=0;i<6;i++){t3+='<rect x="4" y="'+(3+i*8.6)+'" width="44" height="6" rx="1" fill="none" stroke="'+C+'"/><path d="M52 '+(6+i*8.6)+'h14" stroke="'+C+'"/><rect x="70" y="'+(3+i*8.6)+'" width="46" height="6" rx="1" fill="'+(i===0?'var(--ok)':'none')+'" stroke="'+C+'"/>';}th('th3',t3);
-var t4='';[1,1,1,1,1,0].forEach(function(v,i){t4+='<rect x="'+(6+i*19)+'" y="'+(v?14:44)+'" width="14" height="'+(v?36:6)+'" fill="'+(v?'var(--ok)':'var(--low)')+'"/>';});th('th4',t4+'<path d="M2 50h116" stroke="'+C+'"/>');
-var t5='';D.regimes.forEach(function(R,i){R.v.forEach(function(v,j){t5+='<rect x="'+(4+j*19)+'" y="'+(2+i*10.6)+'" width="16" height="8" rx="1" fill="'+(v==='H'?'var(--ok)':v==='M'?'var(--amber)':'none')+'" stroke="'+(v==='L'?'var(--low)':'none')+'" stroke-dasharray="'+(v==='L'?'2 1':'')+'" opacity="'+(v==='M'?.6:1)+'"/>';});});th('th5',t5);
-
 /* contents */
-var secs=[['ledger','Ledger'],['tldr','TL;DR'],['abstract','Abstract'],['defs','Terms'],['jagged','01 Jagged capability'],['evidence','02 Evidence streams'],['rails','03 Six rails'],['coverage','04 Weakest rail'],['regimes','05 Existing regimes'],['scope','Scope'],['cite','Cite']];
+var secs=[['short','The short version'],['principle','Principle and fallacy'],['jagged','Jagged capability'],['evidence','Evidence streams'],['rails','Six rails'],['coverage','The weakest rail'],['regimes','Existing regimes'],['scope','Scope'],['cite','Cite']];
 var toc=document.getElementById('toc'),tb=document.getElementById('topbar');
 secs.forEach(function(s){[toc,tb].forEach(function(n){var a=el('a','',s[1]);a.href='#'+s[0];n.appendChild(a);});});
 function spy(){var y=window.scrollY,cur=null;secs.forEach(function(s){var e=document.getElementById(s[0]);if(e&&e.getBoundingClientRect().top<140)cur=s[0];});
@@ -480,7 +428,7 @@ window.addEventListener('scroll',spy,{passive:true});spy();
 var btn=document.getElementById('themeTg'),lbl=document.getElementById('themeLbl');
 function curDark(){var t=document.documentElement.getAttribute('data-theme');if(t)return t==='dark';return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}
 function setLbl(){lbl.textContent=curDark()?'Light':'Dark';}
-btn.addEventListener('click',function(){var n=curDark()?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('page-theme',n);}catch(e){}setLbl();});
+btn.addEventListener('click',function(){var n=curDark()?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('obf-theme',n);}catch(e){}setLbl();});
 if(window.matchMedia)window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',setLbl);
 setLbl();
 })();
