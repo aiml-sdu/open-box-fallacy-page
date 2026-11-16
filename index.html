@@ -32,7 +32,7 @@ a:hover{color:var(--accent)}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 .wrap{max-width:720px;margin:0 auto;padding:0 16px}
 .wide{max-width:1120px;margin:0 auto;padding:0 16px}
-header.top{padding:72px 0 28px}
+header.top{padding-top:72px;padding-bottom:28px}
 .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 18px}
 h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,6vw,54px);line-height:1.08;letter-spacing:-.01em;margin:0 0 10px}
 .sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,23px);color:var(--ink2);margin:0 0 22px}
@@ -401,7 +401,7 @@ var g=document.getElementById('ledgerGrid'),cells=[],rowEls=[],colHeads=[];
 function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
 g.appendChild(el('div','lh first','Regime'));
 D.rails.forEach(function(r,j){var h=el('div','lh',r);h.tabIndex=0;h.setAttribute('role','columnheader');h.onmouseenter=h.onfocus=h.onclick=function(){selRail(j)};colHeads.push(h);g.appendChild(h);});
-var th=el('div','lh tcol','Thin rails');g.appendChild(th);
+g.appendChild(el('div','lh tcol','Thin rails'));
 D.regimes.forEach(function(R,i){
   var rn=el('div','rn',R.name+'<small>'+R.inst+'</small>');rn.tabIndex=0;rn.onmouseenter=rn.onfocus=rn.onclick=function(){selRegime(i)};g.appendChild(rn);
   var row=[rn];cells[i]=[];
